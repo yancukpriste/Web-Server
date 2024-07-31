@@ -1,0 +1,104 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <title>Design Web Server</title>
+
+        <style>
+            body{
+                background: url(https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/likmi-kampus.original.jpg) rgba(0, 0, 0, 0.4);
+                background-blend-mode: multiply;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                text-align: center;
+                text-shadow: 2px 2px 3px black;
+                color: #fff;
+            }
+
+            @media(max-width: 998px){
+                .sidebar{
+                    background-color: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(10px);
+                }
+            }
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin: 20px 0 10px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            li {
+                font-size: 1.2em;
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+
+    <body class="vh-100 overflow-hidden">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+            <div class="container">
+
+        <!--Logo-->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABVlBMVEVHcEwJKH8AAF9ba6QAAFBfb6cAABRkc6kAEXM4T5RndqxOYZz/9QD7z9D/+AD//AD4p6j1cHP7vr+Znz+kqDr98QB8iKHSAABvf07HAABufKzDwCr2l5j1jpD3hYjbAACdpJDv5Q3lrK7wYmP79fXRnQn3np/6zgLsLyuvrzXl3Qn16gbBwFP94APIxETgOj3yfH3wV1iGLzfdm5uyBQDTlZXmUUrQi4u9vF/etw6nU1iPmJiRMT29vnDgpwvsxsj66eq/AAD4sLL83t65Xl5gclTGgIR7iUuvsXP1U2KFjke8uy/RzDPd1iG5VVSjSwDscgvrmBX1QE3EcXGoRBv3twWNlkXDhxvWzyTpURLrpT/phA/kkZLrm5vIQ0Syt4XgWVnJsRmmTDzhd0u/Z2fUIivrXyxDW13Y0SDb1Ba6Li6lAADQlaDSbgDKdXXrcym7aQCscAqDMmqIAAAADHRSTlMAZy3LHK0N+EqC36rpRvTxAAACQElEQVQokXWSV3PaQBSFhUEIyGol1KwgCSRAiN5ierMxvRnsAYx7L+n5/y9ZOTZxis/MPn1z7t2552DYazkc2FuyEGqFsPwfedRHCB9U4l/3hqsSpbSxxlPjitX2J3MKSdgV70Vu0eaicc/r2XarGuW6nD47Ojq6jHTZWMW6ZjaiqLW5et7tVdz9/nWdvad6hP15nWcUbUvf+grNhGQlnU8dR0Q+TtieGT+W7vohhqG9Xm86k7/9wrFU0oO8ds+IGi5m+zRDkrTX7d7PXNzu6KIG4wSGWYswJpbCIYbcDpKyGymw+X5ruICw9w6zPoBDcbZvsuAuyciKkkJQH2ogiWN4EnKRu3STZpok00wHAikfgt9ZDRSdmLMGB1KYpuk0GpjJZAJ53+bO1p4kwXML5lBBLJYiyV0SPYamFWREMDKElQ3MJlADKY+YrHgD4XDKZ8JPe9wIoN9ihCax1w06FArJsnyaNtnH6lI8PHQhiMd5tu73N83vBrcbfn+u06qW2qDmNNNXqcFlwd9o+E9PTi5SZ2eTm/JVJEIJG+b9iJjULX3+YCpX6By0JlfZEjuOEk+Hx4tQZJedQi6XK3w9uGmVs/qApXrOX6kIMMaBZblTQK5JuVzVAQt4z3NmriQABiztZbPVajb7wwAJCIr4SyEFBI0VnNV1vT6dJuYJwAvrHlnjEBrTxOp4lQiv5lMKmImseyIkH/mEMZ8eG3PD4PnH+MvGp8G4ixDU81qtWDtXBcKF/91dm8PiRLI4frf2JxIiX4+nONxQAAAAAElFTkSuQmCC" style="margin-right: 5px;">
+                <a class="navbar-brand fs-3">Cloud System</a>
+
+        <!--Button-->
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <!--SideBar-->
+                <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!--SideBar Head-->
+                    <div class="offcanvas-header text-white border-bottom">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+        <!--SideBar Body-->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item mx-2">
+                                <a class="nav-link active" aria-current="page" href="#">Web Server</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">E-mail Server</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Messaging Server</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <h1>Welcome to Our Website</h1>
+            <h2>Anggota Kelompok:</h2>
+            <ul>
+                <li>1. Jonathan Hansen - 2022110006</li>
+                <li>2. Andika Faiz Ibrahim - 2022110009</li>
+                <li>3. Joeseph Colin Cleary - 2022110023</li>
+                <li>4. Benedictus Marcellino - 2022110074</li>
+            </ul>
+        </div>
+    </body>
+    </html>
